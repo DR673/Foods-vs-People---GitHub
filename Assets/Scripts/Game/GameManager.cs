@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    public Spawner spawner;
+    public HealthSystem health;
+    public CurrencySystem currency;
+
     void Start()
     {
         GetComponent<HealthSystem>().Init();
