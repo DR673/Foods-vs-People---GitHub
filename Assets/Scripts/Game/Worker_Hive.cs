@@ -66,7 +66,7 @@ public class Worker_Hive : MonoBehaviour
 
         if (health <= 0)
         {
-            Debug.Log("Tower is dead");
+            Debug.Log("Worker Hive is dead");
             Destroy(gameObject);
         }
     }
