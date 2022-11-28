@@ -9,13 +9,13 @@ public class ShootItem : MonoBehaviour
     public Transform graphics;
 
     // Damage
-    public int damage;
+    public float damage;
 
     // Speed
     public float flySpeed, rotateSpeed;
 
     // Initiate
-    public void Init(int dmg)
+    public void Init(float dmg)
     {
         damage = dmg;
     }

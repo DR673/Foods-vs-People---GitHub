@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cookie_Cannon : MonoBehaviour
+public class Cereal_Gatling : MonoBehaviour
 {
     // Health
     public int health;
