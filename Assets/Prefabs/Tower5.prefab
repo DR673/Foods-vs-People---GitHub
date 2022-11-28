@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3522426161360679159
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4587810959872834309}
-  m_Layer: 0
-  m_Name: FireFromPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4587810959872834309
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3522426161360679159}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.31, y: -0.08, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 298429384864914545}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4084766447659317311
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 298429384864914545}
   - component: {fileID: 8929079935045829286}
-  - component: {fileID: 3831246058389133587}
+  - component: {fileID: -125875689368609976}
   m_Layer: 0
-  m_Name: Tower4
+  m_Name: Tower5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4587810959872834309}
+  - {fileID: 4021577345292307467}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -106,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 239327957
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dec708717c95a5849b5b917303eeba21, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50538a4ea2719b74aabc79ec17eb9034, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3831246058389133587
+--- !u!114 &-125875689368609976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,12 +95,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 4084766447659317311}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e1506a0cc125a54292f330727d0d0c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 489caf07492800f4b910fa319def78ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 250
-  damage: 2.5
-  prefab_shootItem: {fileID: 3684701469313802344, guid: c1860e08d6b9f7441a44646eb9d060fa, type: 3}
-  interval: 0.25
-  cost: 250
-  FireFromPoint: {fileID: 4587810959872834309}
+  damage: 10
+  prefab_shootItem: {fileID: 1909200887613890191, guid: 709715831fe7efe439a8e49d53a776b0, type: 3}
+  interval: 2
+  cost: 125
+  FireFromPoint: {fileID: 4021577345292307467}
+--- !u!1 &7004811876068824705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4021577345292307467}
+  m_Layer: 0
+  m_Name: FireFromPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4021577345292307467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7004811876068824705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.35, y: 0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 298429384864914545}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

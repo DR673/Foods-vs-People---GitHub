@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShootItem : MonoBehaviour
 {
-
     // Graphics (the sprite renderer)
     public Transform graphics;
 

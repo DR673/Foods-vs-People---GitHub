@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cookie_Cannon : MonoBehaviour
+public class Reverse_Cookie_Cannon : MonoBehaviour
 {
     // Health
     public int health;

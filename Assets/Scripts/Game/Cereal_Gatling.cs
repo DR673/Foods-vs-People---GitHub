@@ -19,6 +19,9 @@ public class Cereal_Gatling : MonoBehaviour
     // Cost
     public int cost;
 
+    // Point that projectiles fires from
+    public Transform FireFromPoint;
+
     // Initiate (start the shooting interval)
     void Start()
     {
@@ -38,7 +41,7 @@ public class Cereal_Gatling : MonoBehaviour
     void ShootItem()
     {
         // Instantiate shoot item
-        GameObject shotItem = Instantiate(prefab_shootItem, transform);
+        GameObject shotItem = Instantiate(prefab_shootItem, FireFromPoint.transform);
 
         // Set its values
         shotItem.GetComponent<ShootItem>().Init(damage);
