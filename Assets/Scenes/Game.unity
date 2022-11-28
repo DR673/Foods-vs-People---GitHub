@@ -2007,7 +2007,7 @@ MonoBehaviour:
   - {fileID: 869226699}
   - {fileID: 823473993}
   - {fileID: 185629920}
-  spawnInterval: 2
+  spawnInterval: 5
 --- !u!1 &857180447
 GameObject:
   m_ObjectHideFlags: 0

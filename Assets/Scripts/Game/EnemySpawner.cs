@@ -18,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
     public List<Transform> spawnPoints;
 
     // Enemy spawn interval
-    public float spawnInterval = 2f;
+    public float spawnInterval = 5f;
 
     public void StartSpawning()
     {
