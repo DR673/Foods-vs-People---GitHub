@@ -25,7 +25,7 @@ public class ShootItem : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             Debug.Log("Shot the enemy");
-            collision.GetComponent<Enemy>().LoseHealth();
+            collision.GetComponent<Enemy>().LoseHealth(damage);
             Destroy(gameObject);
         }
 

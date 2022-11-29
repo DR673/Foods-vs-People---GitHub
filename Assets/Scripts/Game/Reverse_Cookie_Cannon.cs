@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Reverse_Cookie_Cannon : MonoBehaviour
+public class Reverse_Cookie_Cannon : Tower
 {
-    // Health
-    public int health;
-
     // Damage
     public float damage;
 
@@ -16,14 +13,11 @@ public class Reverse_Cookie_Cannon : MonoBehaviour
     // Shoot interval
     public float interval;
 
-    // Cost
-    public int cost;
-
     // Point that projectiles fires from
     public Transform FireFromPoint;
 
     // Initiate (start the shooting interval)
-    void Start()
+    protected override void Start()
     {
         // Start the shooting interval IEnumerator
         StartCoroutine(ShootDelay());
@@ -45,23 +39,5 @@ public class Reverse_Cookie_Cannon : MonoBehaviour
 
         // Set its values
         shotItem.GetComponent<ShootItem>().Init(damage);
-    }
-
-    // Lose health
-    public void ShootHealth()
-    {
-        health -= 250;
-
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    // Die
-    public void Die()
-    {
-        Debug.Log("Cookie Cannon is dead");
-        Destroy(gameObject);
     }
 }

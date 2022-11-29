@@ -4,33 +4,67 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public Cookie_Cannon CookieCannonScript;
-
     // Health
     public float health;
 
     // Attack power
     public int attackPower;
 
+    // Attack interval
+    public float attackInterval;
+
     // Move speed
     public float moveSpeed;
 
+    public Animator animator;
+
+    Coroutine attackOrder;
+    Tower detectedTower;
+
     void Update()
     {
-        Move();
+        if (!detectedTower)
+        {
+            Move();
+        }
+    }
+
+    IEnumerator Attack()
+    {
+        animator.Play("Attack");
+
+        // Wait attackInterval
+        yield return new WaitForSeconds(attackInterval);
+
+        // Attack again
+        attackOrder = StartCoroutine(Attack());
     }
 
     // Moving forward
     void Move()
     {
+        animator.Play("Move");
+
         transform.Translate(-transform.right * moveSpeed * Time.deltaTime);
     }
 
+    public void InflictDamage()
+    {
+        bool towerDied = detectedTower.LoseHealth(attackPower);
+
+        if (towerDied)
+        {
+            detectedTower = null;
+
+            StopCoroutine(attackOrder);
+        }
+    }
+
     // Lose health
-    public void LoseHealth()
+    public void LoseHealth(float amount)
     {
         // Decrease health value by amount of damage that projectile does
-        health -= CookieCannonScript.damage;
+        health -= amount;
 
         // Blink red animation
         StartCoroutine(BlinkRed());
@@ -52,5 +86,19 @@ public class Enemy : MonoBehaviour
 
         // Revert to default colour
         GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (detectedTower)
+        {
+            return;
+        }
+
+        if (collision.tag == "Tower")
+        {
+            detectedTower = collision.GetComponent<Tower>();
+            attackOrder = StartCoroutine(Attack());
+        }
     }
 }

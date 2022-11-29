@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5573562316065621508}
   - component: {fileID: -8427671602693002746}
   - component: {fileID: 6483129039779235986}
+  - component: {fileID: 179461333971348518}
+  - component: {fileID: -7564313374606116751}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -126,4 +128,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 300
   attackPower: 50
+  attackInterval: 1
   moveSpeed: 0.25
+  animator: {fileID: -7564313374606116751}
+--- !u!50 &179461333971348518
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6422977656915458210}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!95 &-7564313374606116751
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6422977656915458210}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4d54ba91691902b4e813afc444811432, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

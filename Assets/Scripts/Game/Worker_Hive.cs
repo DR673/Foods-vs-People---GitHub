@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Worker_Hive : MonoBehaviour
+public class Worker_Hive : Tower
 {
-    // Health
-    public int health;
-
     // Income value
     public int incomeValue;
 
@@ -17,11 +14,8 @@ public class Worker_Hive : MonoBehaviour
     // Honey image object
     public GameObject obj_honey;
 
-    // Cost of tower
-    public int cost;
-
     // Initialise
-    void Start()
+    protected override void Start()
     {
         StartCoroutine(Interval());
     }
@@ -51,23 +45,5 @@ public class Worker_Hive : MonoBehaviour
         obj_honey.SetActive(true);
         yield return new WaitForSeconds(1f);
         obj_honey.SetActive(false);
-    }
-
-    // Lose health
-    public void LoseHealth()
-    {
-        Die();
-    }
-
-    // Die
-    public void Die()
-    {
-        health--;
-
-        if (health <= 0)
-        {
-            Debug.Log("Worker Hive is dead");
-            Destroy(gameObject);
-        }
     }
 }

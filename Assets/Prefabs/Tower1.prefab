@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1117215347545355724}
   - component: {fileID: 8384549117660775224}
   - component: {fileID: -1817863663573155888}
+  - component: {fileID: 8519943725263571571}
   m_Layer: 0
   m_Name: Tower1
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +104,32 @@ MonoBehaviour:
   interval: 8
   obj_honey: {fileID: 8237581413644954628}
   cost: 50
+--- !u!61 &8519943725263571571
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662237189151096683}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.46, y: 0.9}
+  m_EdgeRadius: 0
 --- !u!1 &8237581413644954628
 GameObject:
   m_ObjectHideFlags: 0
