@@ -100,5 +100,10 @@ public class Enemy : MonoBehaviour
             detectedTower = collision.GetComponent<Tower>();
             attackOrder = StartCoroutine(Attack());
         }
+
+        if (collision.tag == "FinishLine")
+        {
+            GetComponent<HealthSystem>().LoseHealth();
+        }
     }
 }
