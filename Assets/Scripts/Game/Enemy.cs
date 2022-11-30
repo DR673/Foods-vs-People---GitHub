@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator Attack()
     {
-        animator.Play("Attack");
+        animator.Play("Attack", 0, 0);
 
         // Wait attackInterval
         yield return new WaitForSeconds(attackInterval);

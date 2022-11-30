@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5638367997835219846}
   - component: {fileID: 2565279617611137382}
   - component: {fileID: 5481621253534682549}
-  - component: {fileID: 1503024110466753047}
+  - component: {fileID: -479292319687759675}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -130,7 +130,7 @@ MonoBehaviour:
   attackPower: 50
   attackInterval: 1
   moveSpeed: 0.25
-  animator: {fileID: 1503024110466753047}
+  animator: {fileID: -479292319687759675}
 --- !u!50 &5481621253534682549
 Rigidbody2D:
   serializedVersion: 4
@@ -152,7 +152,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &1503024110466753047
+--- !u!95 &-479292319687759675
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
