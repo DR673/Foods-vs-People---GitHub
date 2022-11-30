@@ -8,9 +8,16 @@ public class Tower : MonoBehaviour
 
     public int cost;
 
+    private Vector3Int cellPosition;
+
     protected virtual void Start()
     {
 
+    }
+
+    public virtual void Init(Vector3Int cellPos)
+    {
+        cellPosition = cellPos;
     }
 
     // Lose health
@@ -31,6 +38,7 @@ public class Tower : MonoBehaviour
     protected virtual void Die()
     {
         Debug.Log("Pretzel Shield is dead");
+        FindObjectOfType<Spawner>().RevertCellState(cellPosition);
         Destroy(gameObject);
     }
 }
