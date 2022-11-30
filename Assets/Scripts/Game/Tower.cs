@@ -25,6 +25,9 @@ public class Tower : MonoBehaviour
     {
         health -= amount;
 
+        // Blink red animation
+        StartCoroutine(BlinkRed());
+
         if (health <= 0)
         {
             Die();
@@ -40,5 +43,17 @@ public class Tower : MonoBehaviour
         Debug.Log("Pretzel Shield is dead");
         FindObjectOfType<Spawner>().RevertCellState(cellPosition);
         Destroy(gameObject);
+    }
+
+    IEnumerator BlinkRed()
+    {
+        // Change the sprite renderer colour to red
+        GetComponent<SpriteRenderer>().color = Color.red;
+
+        // Wait for really small amount of time
+        yield return new WaitForSeconds(0.2f);
+
+        // Revert to default colour
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }
