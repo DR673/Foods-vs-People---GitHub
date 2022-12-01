@@ -103,7 +103,7 @@ public class Enemy : MonoBehaviour
 
         if (collision.tag == "FinishLine")
         {
-            GetComponent<HealthSystem>().LoseHealth();
+            collision.GetComponent<HealthSystem>().LoseHealth();
         }
     }
 }

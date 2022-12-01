@@ -3,7 +3,9 @@ guid: ef8d6ae04421de04eb8fcd7209450bff
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - animator: {instanceID: 0}
+  - PeopleWinCollider: {fileID: 1338293666674156709, guid: c2d6750401de88f458a90f96af2a2ba4, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
