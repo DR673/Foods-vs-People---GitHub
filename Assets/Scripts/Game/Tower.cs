@@ -40,7 +40,6 @@ public class Tower : MonoBehaviour
     // Die
     protected virtual void Die()
     {
-        Debug.Log("Pretzel Shield is dead");
         FindObjectOfType<Spawner>().RevertCellState(cellPosition);
         Destroy(gameObject);
     }

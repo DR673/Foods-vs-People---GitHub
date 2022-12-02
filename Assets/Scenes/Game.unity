@@ -417,7 +417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488172371}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: -4.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -773,7 +773,7 @@ RectTransform:
   m_Children:
   - {fileID: 1417654300}
   m_Father: {fileID: 1729374471}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1977,6 +1977,8 @@ MonoBehaviour:
   - {fileID: 4084766447659317311, guid: 03ffc356a40627e4d83bfd823628653b, type: 3}
   - {fileID: 4084766447659317311, guid: fcfe5367860272747a090141296fa9d8, type: 3}
   - {fileID: 4084766447659317311, guid: fab7c876da34c7047b0312d073a1c8f1, type: 3}
+  - {fileID: 4084766447659317311, guid: 688c03f725334a147a036d891b0b7988, type: 3}
+  - {fileID: 4084766447659317311, guid: e5ac07572fe8d304c82282299d28b5a6, type: 3}
   spawnTowerRoot: {fileID: 1228738372}
   towersUI:
   - {fileID: 488536964}
@@ -1984,6 +1986,8 @@ MonoBehaviour:
   - {fileID: 1619612636}
   - {fileID: 1263685563}
   - {fileID: 542995682}
+  - {fileID: 1158418478}
+  - {fileID: 1713047309}
   spawnTilemap: {fileID: 756235191}
 --- !u!4 &830654278
 Transform:
@@ -3000,7 +3004,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056993965}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 7, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3021,7 +3025,7 @@ GameObject:
   - component: {fileID: 1158418478}
   - component: {fileID: 1158418477}
   m_Layer: 5
-  m_Name: Tower3 (3)
+  m_Name: Tower6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3072,7 +3076,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 2
+            m_IntArgument: 5
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -3097,7 +3101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1f74de6147737514cbd16277a219ca57, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 264939469fbc8e348ae9957d25e7767f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3206,7 +3210,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228738371}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3849,7 +3853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa4c8c333ffd94fb694b0cb48d32b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerID: 2
+  towerID: 6
   towerCost: 0
 --- !u!114 &1530200086
 MonoBehaviour:
@@ -4177,7 +4181,7 @@ RectTransform:
   m_Children:
   - {fileID: 1847948109}
   m_Father: {fileID: 1729374471}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4344,7 +4348,7 @@ GameObject:
   - component: {fileID: 1713047309}
   - component: {fileID: 1713047308}
   m_Layer: 5
-  m_Name: Tower3 (4)
+  m_Name: Tower7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4395,7 +4399,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 2
+            m_IntArgument: 6
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -4420,7 +4424,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1f74de6147737514cbd16277a219ca57, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 418a2da710fa49347b75f283f6b4295f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4469,8 +4473,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 488536962}
-  - {fileID: 562443117}
   - {fileID: 1619612634}
+  - {fileID: 562443117}
   - {fileID: 1263685561}
   - {fileID: 542995680}
   - {fileID: 1158418476}
@@ -4761,7 +4765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fa4c8c333ffd94fb694b0cb48d32b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerID: 2
+  towerID: 5
   towerCost: 0
 --- !u!114 &2108309242
 MonoBehaviour:
