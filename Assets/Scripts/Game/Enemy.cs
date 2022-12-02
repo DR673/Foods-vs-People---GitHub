@@ -18,6 +18,9 @@ public class Enemy : MonoBehaviour
 
     public Animator animator;
 
+    //Penda Edit
+    public GameObject scriptManager;
+
     Coroutine attackOrder;
     Tower detectedTower;
 
@@ -27,6 +30,7 @@ public class Enemy : MonoBehaviour
         {
             Move();
         }
+        scriptManager = GameObject.FindGameObjectWithTag("ScriptManager");
     }
 
     IEnumerator Attack()
@@ -97,13 +101,15 @@ public class Enemy : MonoBehaviour
 
         if (collision.tag == "Tower")
         {
-            detectedTower = collision.GetComponent<Tower>();
+            detectedTower = collision.gameObject.GetComponent<Tower>();
             attackOrder = StartCoroutine(Attack());
         }
 
         if (collision.tag == "FinishLine")
         {
-            collision.GetComponent<HealthSystem>().LoseHealth();
+            //Penda Edit
+            scriptManager.GetComponent<HealthSystem>().LoseHealth();
+            //collision.gameObject.GetComponent<HealthSystem>().LoseHealth();
         }
     }
 }
