@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73cbbb79f1ac9384dac4d447f7360b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 250
+  health: 50
   cost: 25
   damage: 625
   prefab_shootItem: {fileID: 3684701469313802344, guid: 720a92406ba52724f80c27095cdd93cf, type: 3}

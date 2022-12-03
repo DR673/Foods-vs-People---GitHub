@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour
         {
             Move();
         }
+
         scriptManager = GameObject.FindGameObjectWithTag("ScriptManager");
     }
 
@@ -109,7 +110,6 @@ public class Enemy : MonoBehaviour
         {
             //Penda Edit
             scriptManager.GetComponent<HealthSystem>().LoseHealth();
-            //collision.gameObject.GetComponent<HealthSystem>().LoseHealth();
         }
     }
 }

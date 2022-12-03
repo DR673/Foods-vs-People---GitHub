@@ -28,10 +28,6 @@ public class Poison_Egg : Tower
     {
         yield return new WaitForSeconds(interval);
 
-        // Set the armed poison egg game object as a parent to the unarmed poison egg game object
-
-        Destroy(gameObject);
-
         ShootItem();
     }
 
@@ -40,6 +36,8 @@ public class Poison_Egg : Tower
     {
         // Instantiate shoot item
         GameObject shotItem = Instantiate(prefab_shootItem, FireFromPoint.transform);
+
+        shotItem.transform.localPosition = new Vector3(0, 0, -1);
 
         // Set its values
         shotItem.GetComponent<ShootItem>().Init(damage);
