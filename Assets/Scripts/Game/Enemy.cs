@@ -77,6 +77,8 @@ public class Enemy : MonoBehaviour
         // Check if health is 0 then destroy enemy
         if (health <= 0)
         {
+            scriptManager.GetComponent<EnemySpawner>().enemiesKilled++;
+
             Destroy(gameObject);
         }
     }

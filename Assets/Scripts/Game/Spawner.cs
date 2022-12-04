@@ -76,7 +76,7 @@ public class Spawner : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Not enough currency");
+                    
                 }
             }
         }

@@ -18,7 +18,37 @@ public class EnemySpawner : MonoBehaviour
     public List<Transform> spawnPoints;
 
     // Enemy spawn interval
-    public float spawnInterval = 5f;
+    public float spawnInterval = 11f;
+
+    public int enemiesSpawned = 0;
+
+    public int enemiesKilled = 0;
+
+    public bool userHasWon = false;
+
+    public int stopUpdateFunctionLoop = 0;
+
+    public int totalNumberOfEnemies;
+
+    void Update()
+    {
+        if (enemiesKilled > enemiesSpawned)
+        {
+            enemiesKilled = enemiesSpawned;
+        }
+
+        if (enemiesKilled > 49)
+        {
+            userHasWon = true;
+        }
+
+        if (userHasWon == true && stopUpdateFunctionLoop == 0)
+        {
+            Debug.Log("You Win.");
+
+            stopUpdateFunctionLoop = 1;
+        }
+    }
 
     public void StartSpawning()
     {
@@ -28,11 +58,68 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnDelay()
     {
-        // Call the spawn method
-        SpawnEnemy();
+        if (enemiesSpawned > 49)
+        {
+            yield break;
+        }
 
-        // Wait spawn interval
-        yield return new WaitForSeconds(spawnInterval);
+        else
+        {
+            if (enemiesSpawned > -1 && enemiesSpawned < 5)
+            {
+                spawnInterval = 11f;
+
+                // Wait spawn interval
+                yield return new WaitForSeconds(spawnInterval);
+
+                // Call the spawn method
+                SpawnEnemy();
+            }
+
+            if (enemiesSpawned > 4 && enemiesSpawned < 10)
+            {
+                spawnInterval = 9f;
+
+                // Wait spawn interval
+                yield return new WaitForSeconds(spawnInterval);
+
+                // Call the spawn method
+                SpawnEnemy();
+            }
+
+            if (enemiesSpawned > 9 && enemiesSpawned < 20)
+            {
+                spawnInterval = 7f;
+
+                // Wait spawn interval
+                yield return new WaitForSeconds(spawnInterval);
+
+                // Call the spawn method
+                SpawnEnemy();
+            }
+
+            if (enemiesSpawned > 19 && enemiesSpawned < 30)
+            {
+                spawnInterval = 5f;
+
+                // Wait spawn interval
+                yield return new WaitForSeconds(spawnInterval);
+
+                // Call the spawn method
+                SpawnEnemy();
+            }
+
+            if (enemiesSpawned > 29 && enemiesSpawned < 51)
+            {
+                spawnInterval = 3f;
+
+                // Wait spawn interval
+                yield return new WaitForSeconds(spawnInterval);
+
+                // Call the spawn method
+                SpawnEnemy();
+            }
+        }
 
         // Recall the same coroutine
         StartCoroutine(SpawnDelay());
@@ -48,5 +135,7 @@ public class EnemySpawner : MonoBehaviour
 
         // Instantiate the enemy prefab
         GameObject spawnedEnemy = Instantiate(prefabs[randomPrefabID], spawnPoints[randomSpawnPointID]);
+
+        enemiesSpawned++;
     }
 }
