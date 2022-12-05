@@ -29,61 +29,61 @@ public class ProgressBar : MonoBehaviour
     {
         if (scriptManager.GetComponent<EnemySpawner>().enemiesKilled > (scriptManager.GetComponent<EnemySpawner>().totalNumberOfEnemies * 0.1f) - 0.1f)
         {
-            // Change the sprite renderer colour to light green
+            // Change the image colour to light green
             progressBarPart1.GetComponent<Image>().color = new Color(0, 0.75f, 0);
         }
 
         if (scriptManager.GetComponent<EnemySpawner>().enemiesKilled > (scriptManager.GetComponent<EnemySpawner>().totalNumberOfEnemies * 0.2f) - 0.1f)
         {
-            // Change the sprite renderer colour to light green
+            // Change the image colour to light green
             progressBarPart2.GetComponent<Image>().color = new Color(0, 0.75f, 0);
         }
 
         if (scriptManager.GetComponent<EnemySpawner>().enemiesKilled > (scriptManager.GetComponent<EnemySpawner>().totalNumberOfEnemies * 0.3f) - 0.1f)
         {
-            // Change the sprite renderer colour to light green
+            // Change the image colour to light green
             progressBarPart3.GetComponent<Image>().color = new Color(0, 0.75f, 0);
         }
 
         if (scriptManager.GetComponent<EnemySpawner>().enemiesKilled > (scriptManager.GetComponent<EnemySpawner>().totalNumberOfEnemies * 0.4f) - 0.1f)
         {
-            // Change the sprite renderer colour to light green
+            // Change the image colour to light green
             progressBarPart4.GetComponent<Image>().color = new Color(0, 0.75f, 0);
         }
 
         if (scriptManager.GetComponent<EnemySpawner>().enemiesKilled > (scriptManager.GetComponent<EnemySpawner>().totalNumberOfEnemies * 0.5f) - 0.1f)
         {
-            // Change the sprite renderer colour to light green
+            // Change the image colour to light green
             progressBarPart5.GetComponent<Image>().color = new Color(0, 0.75f, 0);
         }
 
         if (scriptManager.GetComponent<EnemySpawner>().enemiesKilled > (scriptManager.GetComponent<EnemySpawner>().totalNumberOfEnemies * 0.6f) - 0.1f)
         {
-            // Change the sprite renderer colour to light green
+            // Change the image colour to light green
             progressBarPart6.GetComponent<Image>().color = new Color(0, 0.75f, 0);
         }
 
         if (scriptManager.GetComponent<EnemySpawner>().enemiesKilled > (scriptManager.GetComponent<EnemySpawner>().totalNumberOfEnemies * 0.7f) - 0.1f)
         {
-            // Change the sprite renderer colour to light green
+            // Change the image colour to light green
             progressBarPart7.GetComponent<Image>().color = new Color(0, 0.75f, 0);
         }
 
         if (scriptManager.GetComponent<EnemySpawner>().enemiesKilled > (scriptManager.GetComponent<EnemySpawner>().totalNumberOfEnemies * 0.8f) - 0.1f)
         {
-            // Change the sprite renderer colour to light green
+            // Change the image colour to light green
             progressBarPart8.GetComponent<Image>().color = new Color(0, 0.75f, 0);
         }
 
         if (scriptManager.GetComponent<EnemySpawner>().enemiesKilled > (scriptManager.GetComponent<EnemySpawner>().totalNumberOfEnemies * 0.9f) - 0.1f)
         {
-            // Change the sprite renderer colour to light green
+            // Change the image colour to light green
             progressBarPart9.GetComponent<Image>().color = new Color(0, 0.75f, 0);
         }
 
         if (scriptManager.GetComponent<EnemySpawner>().enemiesKilled > (scriptManager.GetComponent<EnemySpawner>().totalNumberOfEnemies * 1.0f) - 0.1f)
         {
-            // Change the sprite renderer colour to light green
+            // Change the image colour to light green
             progressBarPart10.GetComponent<Image>().color = new Color(0, 0.75f, 0);
         }
     }

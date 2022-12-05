@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class HealthSystem : MonoBehaviour
 
     // Current health count
     public int healthCount;
+
+    public GameObject panelYouLose;
 
     // Initiate the health system (reset the health count);
     public void Init()
@@ -41,9 +44,21 @@ public class HealthSystem : MonoBehaviour
     {
         if (healthCount < 1)
         {
-            Debug.Log("You Lose.");
-
-            // Call some reset values and stop the game from the manager
+            StartCoroutine(WaitBeforeRestartingScene());
         }
+    }
+
+    IEnumerator WaitBeforeRestartingScene()
+    {
+        panelYouLose.SetActive(true);
+
+        yield return new WaitForSeconds(5f);
+
+        BackToMainMenuFromLoss();
+    }
+
+    public void BackToMainMenuFromLoss()
+    {
+        SceneManager.LoadScene(0);
     }
 }

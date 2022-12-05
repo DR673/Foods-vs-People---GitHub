@@ -113,5 +113,10 @@ public class Enemy : MonoBehaviour
             //Penda Edit
             scriptManager.GetComponent<HealthSystem>().LoseHealth();
         }
+
+        if (collision.tag == "Out")
+        {
+            Destroy(gameObject);
+        }
     }
 }

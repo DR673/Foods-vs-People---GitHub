@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class EnemySpawner : MonoBehaviour
 
     public int totalNumberOfEnemies;
 
+    public GameObject panelYouWin;
+
     void Update()
     {
         if (enemiesKilled > enemiesSpawned)
@@ -44,10 +47,24 @@ public class EnemySpawner : MonoBehaviour
 
         if (userHasWon == true && stopUpdateFunctionLoop == 0)
         {
-            Debug.Log("You Win.");
+            StartCoroutine(WaitBeforeRestartingScene2());
 
             stopUpdateFunctionLoop = 1;
         }
+    }
+
+    IEnumerator WaitBeforeRestartingScene2()
+    {
+        panelYouWin.SetActive(true);
+
+        yield return new WaitForSeconds(5f);
+
+        BackToMainMenuFromVictory();
+    }
+
+    public void BackToMainMenuFromVictory()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void StartSpawning()

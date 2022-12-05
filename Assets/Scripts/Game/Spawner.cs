@@ -21,11 +21,18 @@ public class Spawner : MonoBehaviour
     // Spawnpoints Tilemap
     public Tilemap spawnTilemap;
 
+    public bool addOrRemove = true;
+
     //Tile position
     private Vector3Int tilePos;
 
     private void Update()
     {
+        if (!addOrRemove)
+        {
+            DetectSpawnPoint();
+        }
+
         if (CanSpawn())
         {
             DetectSpawnPoint();
@@ -57,26 +64,42 @@ public class Spawner : MonoBehaviour
             // Get the center position of the cell
             var cellPosCentered = spawnTilemap.GetCellCenterWorld(cellPosDefault);
 
-            // Check if we can spawn in that cell (collied)
-            if (spawnTilemap.GetColliderType(cellPosDefault) == Tile.ColliderType.Sprite)
+            if (addOrRemove)
             {
-                int towerCost = TowerCost(spawnID);
-
-                // Check if currency is enough to spawn
-                if (GameManager.instance.currency.EnoughCurrency(towerCost))
+                // Check if we can spawn in that cell (collied)
+                if (spawnTilemap.GetColliderType(cellPosDefault) == Tile.ColliderType.Sprite)
                 {
-                    // Use the amount of cost from the currency available
-                    GameManager.instance.currency.Use(towerCost);
+                    int towerCost = TowerCost(spawnID);
 
-                    // Spawn the tower
-                    SpawnTower(cellPosCentered, cellPosDefault);
+                    // Check if currency is enough to spawn
+                    if (GameManager.instance.currency.EnoughCurrency(towerCost))
+                    {
+                        // Use the amount of cost from the currency available
+                        GameManager.instance.currency.Use(towerCost);
 
-                    // Disable the collider
-                    spawnTilemap.SetColliderType(cellPosDefault, Tile.ColliderType.None);
+                        // Spawn the tower
+                        SpawnTower(cellPosCentered, cellPosDefault);
+
+                        // Disable the collider
+                        spawnTilemap.SetColliderType(cellPosDefault, Tile.ColliderType.None);
+                    }
+                    else
+                    {
+                        
+                    }
                 }
-                else
+            }
+            else
+            {
+                //removing
+                GameObject[] arrayOfTowers = GameObject.FindGameObjectsWithTag("Tower");
+
+                foreach(GameObject tower in arrayOfTowers)
                 {
-                    
+                    if (tower.GetComponent<Tower>().cellPosition == cellPosDefault)
+                    {
+                        tower.GetComponent<Tower>().LoseHealth(10000);
+                    }
                 }
             }
         }
