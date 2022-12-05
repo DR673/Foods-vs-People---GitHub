@@ -116,6 +116,8 @@ public class Enemy : MonoBehaviour
 
         if (collision.tag == "Out")
         {
+            scriptManager.GetComponent<EnemySpawner>().enemiesKilled++;
+
             Destroy(gameObject);
         }
     }

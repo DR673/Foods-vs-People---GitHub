@@ -25,7 +25,7 @@ public class Miner : Enemy
     {
         Vector3 temporaryMinerPosition = minerGameObject.transform.position;
 
-        temporaryMinerPosition.x = -3.5f;
+        temporaryMinerPosition.x = -3.6f;
 
         minerGameObject.transform.position = new Vector3(temporaryMinerPosition.x, temporaryMinerPosition.y, temporaryMinerPosition.z);
 

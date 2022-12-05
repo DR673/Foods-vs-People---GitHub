@@ -100,10 +100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 250
-  incomeValue: 50
-  interval: 8
-  obj_honey: {fileID: 8237581413644954628}
   cost: 50
+  cellPosition: {x: 0, y: 0, z: 0}
+  incomeValue: 50
+  interval: 10
+  obj_honey: {fileID: 8237581413644954628}
 --- !u!61 &8519943725263571571
 BoxCollider2D:
   m_ObjectHideFlags: 0
